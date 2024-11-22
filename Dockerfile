@@ -18,10 +18,8 @@ RUN set -ex \
     snapcast \
     snapweb@testing \
     avahi \
+    avahi-compat-libdns_sd \
     dbus \
-  && echo "**** setup dbus ****" \
-    && dbus-uuidgen > /var/lib/dbus/machine-id \
-    && mkdir -p /var/run/dbus \
   && echo "**** cleanup ****" \
   && rm -rf \
     /tmp/*
