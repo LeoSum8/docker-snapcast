@@ -17,6 +17,11 @@ RUN set -ex \
     shairport-sync@testing \
     snapcast \
     snapweb@testing \
+    avahi \
+    dbus \
+  && echo "**** setup dbus ****" \
+    && dbus-uuidgen > /var/lib/dbus/machine-id \
+    && mkdir -p /var/run/dbus \
   && echo "**** cleanup ****" \
   && rm -rf \
     /tmp/*
