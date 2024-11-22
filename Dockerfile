@@ -20,6 +20,7 @@ RUN set -ex \
     avahi \
     avahi-compat-libdns_sd \
     dbus \
+    nss-mdns \
   && echo "**** cleanup ****" \
   && dbus-uuidgen > /var/lib/dbus/machine-id \
   && mkdir -p /var/run/dbus \
